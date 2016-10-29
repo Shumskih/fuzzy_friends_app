@@ -27,7 +27,18 @@ class Cat
     end
 
 
-    def move
+    def move(destination)
         puts "Running to the #{destination}"
     end
 end
+
+
+bird = Bird.new
+dog = Dog.new
+cat = Cat.new
+
+bird.move("tree")
+dog.talk
+bird.talk
+cat.talk
+cat.move("house")
