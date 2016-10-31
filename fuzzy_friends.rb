@@ -37,14 +37,27 @@ class Bird < Animal
     def talk
         puts "#{@name} says Chik-Chirik!"
     end
+
+    def to_s
+        "#{@name} the bird, age #{age}"
+    end
 end
 
 
 class Dog < Animal
 
+    def to_s
+        "#{@name} the dog, age #{age}"
+    end
+
 end
 
 class Cat < Animal
+
+    def to_s
+        "#{@name} the cat, age #{age}"
+    end
+
     def talk
         puts "#{@name} says Meow!"
     end
@@ -56,17 +69,15 @@ class Armadillo < Animal
         puts "#{@name} unroll!"
         super
     end
+
+    def to_s
+        "#{@name} the armadillo, age #{age}"
+    end
 end
 
+lucy = Dog.new
+lucy.move("out")
+lucy.name = "Lucy"
 
-bird = Bird.new
-dog = Dog.new
-cat = Cat.new
-armadillo = Armadillo.new
 
-bird.move("tree")
-dog.talk
-dog.move("litter box")
-bird.talk
-cat.talk
-cat.move("house")
+puts lucy
